@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntOffset
@@ -154,9 +156,10 @@ fun StandByScreen(
             containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
             contentColor = if (isDayMode) StandByDayText else StandByNightText
         ) {
-            Text(
-                text = if (isDayMode) "D" else "N",
-                style = MaterialTheme.typography.labelMedium
+            Icon(
+                painter = painterResource(R.drawable.ic_moon_waning_crescent),
+                contentDescription = if (isDayMode) "Switch to night mode" else "Switch to day mode",
+                modifier = Modifier.size(24.dp)
             )
         }
     }
