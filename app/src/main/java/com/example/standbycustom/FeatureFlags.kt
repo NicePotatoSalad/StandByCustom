@@ -6,5 +6,5 @@ package com.example.standbycustom
  */
 object FeatureFlags {
     /** When true, shows the fast-forward FAB that moves the clock to the next segment. Useful for testing. */
-    const val FAST_FORWARD_BUTTON_ENABLED = false
+    const val FAST_FORWARD_BUTTON_ENABLED = true
 }
