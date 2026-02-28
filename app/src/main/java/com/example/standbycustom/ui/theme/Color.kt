@@ -13,3 +13,6 @@ val Pink40 = Color(0xFF7D5260)
 // Stand By clock theming (Day = dimmed white, Night = red for OLED)
 val StandByDayText = Color(0xFFD1D1D1)
 val StandByNightText = Color(0xFFFF0000)
+
+// Light mode: clock as tint of black (Material onSurface-style)
+val StandByLightModeClock = Color(0xFF1C1B1F)
